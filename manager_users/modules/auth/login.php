@@ -4,12 +4,14 @@
     die('Acces denied...');
  }
 
-$data=[
+ //Thayy đổi title của trang 
+$title=[  
    'pageTitle' => 'Đăng nhập tài khoản'
 ];
 
- layout('header', $data);
+ layout('header', $title);
  ?>
+
 
 <div class="row">
    <div class="col-4" style="margin:50px auto">

@@ -11,3 +11,9 @@ define('_WEB_HOST_TEMPLATE',_WEB_HOST.'/template');
 //Thiết lập path 
 define('_WEB_PATH', __DIR__);
 define('_WEB_PATH_TEMPLATE', _WEB_PATH.'/template');
+
+//Thong tin ket noi
+const _HOST = 'localhost';
+const _DB = 'web_tennis';
+const _USER = 'root';
+const _PASS = '';

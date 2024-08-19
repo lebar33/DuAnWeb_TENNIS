@@ -1,6 +1,8 @@
 <?php
 session_start(); // Khoi chay session
 require_once "config.php";
+require_once './includes/connect.php';
+require_once ('./includes/database.php');
 require_once ('./includes/function.php');
 
 //module là cái mình điền sau dấu ? như là file modules trong phần manager_users & action có nghĩa là chạy cái file nào trong cái module đó

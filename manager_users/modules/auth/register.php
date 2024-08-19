@@ -4,13 +4,18 @@
     die('Acces denied...');
  }
 
-$data=[
+// Thay đổi title của trang
+$tile=[
    'pageTitle' => 'Đăng ký tài khoản'
 ];
+ layout('header', $tile);
 
- layout('header', $data);
- ?>
 
+$kq = getRows('SELECT * FROM users');
+echo '<pre>';
+print_r($kq);
+echo '</pre>';
+?>
 <div class="row">
    <div class="col-4" style="margin:50px auto">
       <h2 class="text-center text-uppercase">Đăng ký tài khoản của bạn</h2>
