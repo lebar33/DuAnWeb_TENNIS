@@ -2,8 +2,23 @@
 session_start(); // Khoi chay session
 require_once "config.php";
 require_once './includes/connect.php';
+
+//Thư viện phpmailer
+require_once ('./includes/phpmailer/Exception.php');
+require_once ('./includes/phpmailer/PHPMailer.php');
+require_once ('./includes/phpmailer/SMTP.php');
+
 require_once ('./includes/database.php');
 require_once ('./includes/function.php');
+require_once ('./includes/session.php');
+
+// // setFlashData('avc', 'Cai dat thanh cong');
+// echo getFlashData('avc');
+
+// $subject = 'Chu de';
+// $content = 'Noi dung';
+// sendMail('22H1120088@ut.edu.vn', $subject, $content);
+
 
 //module là cái mình điền sau dấu ? như là file modules trong phần manager_users & action có nghĩa là chạy cái file nào trong cái module đó
 $module = _MODULE; // Mặc định truy cập vào home 

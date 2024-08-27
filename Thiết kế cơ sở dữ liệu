@@ -9,6 +9,7 @@
 + pass - varchar(50)
 + forgotToken - varchar(100) -> để lấy lại mật khẩu khi người dùng quên mật khẩu 
 + activeToken - varchar(100) -> Xác thực email đúng để kích hoạt tài khoản 
++ status - int default(0) -> 0 có nghĩa là chưa được kích hoạt, 1 có nghĩa là đã được kích hoạt 
 + creat_at - datetime -> thời gian tạo 
 + update_at - datime -> thời gian thay đổi 
 
@@ -17,3 +18,7 @@
 + user_id - int
 + token - varchar(100) -> Nếu người dùng đăng nhập thì lưu token lại, máy khác đăng nhập lại tài khoản đó thì nó có token này nữa thì ko cho đăng nhập
 + create_at - datetime  
+
+
+-Chức năng kích hoạt tài khoản:
++ mình gửi tin nhắn cho mail người dùng đăng kí nếu người dùng nhấp vào link có trong mail đó thì tài khoản được kích hoạt => status = 1; 
