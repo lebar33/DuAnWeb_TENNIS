@@ -86,7 +86,7 @@ if(!empty($token)){
                </div>
                <div class="form-group mg-form">
                   <label for="">Nhập lại Password</label>
-                  <input name="password-confirm" type="password" class="form-control" placeholder="Nhập lại mật khẩu"/>
+                  <input name="password-confirm" type="password" class="form-control" placeholder="Nhập lại mật khẩu" style="font-family:Arial, Helvetica, sans-serif;"/>
                   <?php
                      echo form_error('password-confirm','<span class="error">', '</span>', $error);
                   ?>
@@ -107,5 +107,5 @@ else{
    getSmg('Liên kết không tồn tại hoặc đã hết hạn', 'danger');
 }
 
-layout('footer');
+layout('footer-login');
 ?>

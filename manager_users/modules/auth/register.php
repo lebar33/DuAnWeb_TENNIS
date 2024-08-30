@@ -121,7 +121,7 @@ $old = getFlashData('old'); // Lấy lại các thông tin đã nhập trước 
 $tile=[
    'pageTitle' => 'Đăng ký tài khoản'
 ];
-layout('header', $tile);
+layout('header-login', $tile);
 ?>
 
 <div class="row">
@@ -135,7 +135,7 @@ layout('header', $tile);
       <form action="" method="post" >
          <div class="form-group mg-form">
             <label for="">Họ và tên</label>
-            <input name="fullname" type="fullname" class="form-control" placeholder="Họ và tên của bạn" value="<?php
+            <input name="fullname" type="fullname" class="form-control" placeholder="Họ và tên của bạn" style="font-family:Arial, Helvetica, sans-serif;" value="<?php
             echo old('fullname', $old);
             ?>"/>
             <?php
@@ -144,7 +144,7 @@ layout('header', $tile);
          </div>
          <div class="form-group mg-form">
             <label for="">Email</label>
-            <input name="email" type="email" class="form-control" placeholder="Địa chỉ email" value="<?php
+            <input name="email" type="email" class="form-control" placeholder="Địa chỉ email" style="font-family:Arial, Helvetica, sans-serif;" value="<?php
             echo old('email', $old);
             ?>"/>
             <?php
@@ -153,7 +153,7 @@ layout('header', $tile);
          </div>
          <div class="form-group mg-form">
             <label for="">Số điện thoại</label>
-            <input name="phone" type="number" class="form-control" placeholder="Số điện thoại" value="<?php
+            <input name="phone" type="number" class="form-control" placeholder="Số điện thoại" style="font-family:Arial, Helvetica, sans-serif;" value="<?php
             echo old('phone', $old);
             ?>"/>
             <?php
@@ -162,14 +162,14 @@ layout('header', $tile);
          </div>
          <div class="form-group mg-form">
             <label for="">Password</label>
-            <input name="password" type="password" class="form-control" placeholder="Mật khẩu"/>
+            <input name="password" type="password" class="form-control" placeholder="Mật khẩu" style="font-family:Arial, Helvetica, sans-serif;"/>
             <?php
                echo form_error('password','<span class="error">', '</span>', $error);
             ?>
          </div>
          <div class="form-group mg-form">
             <label for="">Nhập lại Password</label>
-            <input name="password-confirm" type="password" class="form-control" placeholder="Nhập lại mật khẩu"/>
+            <input name="password-confirm" type="password" class="form-control" placeholder="Nhập lại mật khẩu" style="font-family:Arial, Helvetica, sans-serif;"/>
             <?php
                echo form_error('password-confirm','<span class="error">', '</span>', $error);
             ?>
@@ -181,5 +181,5 @@ layout('header', $tile);
 </div>
 
  <?php
-layout('footer');
+layout('footer-login');
  ?>

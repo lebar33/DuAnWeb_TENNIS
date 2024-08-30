@@ -9,7 +9,7 @@ $title=[
    'pageTitle' => 'Quên mật khẩu'
 ];
 
-layout('header', $title);
+layout('header-login', $title);
 
 //Kiểm tra trạng thái đăng nhập 
 $check = false;
@@ -82,7 +82,7 @@ $msgType = getFlashData('msg_type');
       <form action="" method="post" >
          <div class="form-group mg-form">
             <label for="">Email</label>
-            <input name="email" type="email" class="form-control" placeholder="Địa chỉ email"/>
+            <input name="email" type="email" class="form-control" placeholder="Địa chỉ email" style="font-family:Arial, Helvetica, sans-serif;"/>
          </div>
          <button type="submit" class="mg-btn btn btn-primary btn-block">Gửi</button><hr>
          <p class="text-center"><a href="?module=auth&action=login">Đăng nhập</a></p>
@@ -92,5 +92,5 @@ $msgType = getFlashData('msg_type');
 </div>
 
  <?php
-layout('footer');
+layout('footer-login');
  ?>

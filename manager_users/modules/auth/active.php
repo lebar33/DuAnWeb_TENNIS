@@ -4,7 +4,7 @@ if(!defined('_CODE')){ // Nếu hằng _CODE không tồn tại nghĩa là ngư�
    die('Acces denied...');
 }
 
-layout('header');
+layout('header-login');
 
 $token = filter()['token'];// Lấy token trên thanh địa chỉ 
 if(!empty($token)){
@@ -36,6 +36,6 @@ else{
 }
 
 
-layout('footer');
+layout('footer-login');
 ?>
 <h1>ACTIVE</h1>

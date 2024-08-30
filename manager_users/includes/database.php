@@ -60,7 +60,6 @@ function delete($table, $condition = ""){
 }
 
 // lấy nhiều dòng dl
-
 function getRaw($sql){
    $kq = query($sql,'',true);
    if(is_object($kq)){
