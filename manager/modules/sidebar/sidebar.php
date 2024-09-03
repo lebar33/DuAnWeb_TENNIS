@@ -4,9 +4,7 @@
     </div>
     <div class="Admin-Sidebar-Content">
         <ul>
-            <li><a href="?module=admin&action=dashboard"><i class="ri-dashboard-line"></i>Dashboard</a>
-                
-            </li>
+            <li><a href="?module=admin&action=dashboard"><i class="ri-dashboard-line"></i>Dashboard</a></li>
             <li><a href=""><i class="ri-file-list-line"></i>Đơn Hàng</a>
                 <ul class="Sub-Menu">
                     <div class="Sub-Menu-Items">
