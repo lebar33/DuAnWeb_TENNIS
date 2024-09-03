@@ -12,7 +12,7 @@
         <div class="row-grid">
             <div class="Admin-Sidebar">
                 <div class="Admin-Sidebar-Top">
-                    <img src="/admin/asset/image/logo.png" alt="">
+                    <img src="image/logo.png" alt="">
                 </div>
                 <div class="Admin-Sidebar-Content">
                     <ul>
@@ -31,7 +31,15 @@
                             <ul class="Sub-Menu">
                                 <div class="Sub-Menu-Items">
                                     <li><a href="">Danh Sách</a></li>
-                                <li><a href="">Thêm</a></li>
+                                    <li><a href="">Thêm</a></li>
+                                </div>
+                                
+                            </ul>
+                        </li>
+                        <li><a href=""><i class="ri-user-3-fill"></i>Người dùng</a>
+                            <ul class="Sub-Menu">
+                                <div class="Sub-Menu-Items">
+                                    <li><a href="">Danh Sách</a></li>
                                 </div>
                                 
                             </ul>
@@ -68,6 +76,6 @@
 
     </section>
 
-    <script src="/admin/asset/js/script.js" ></script>
+    <script src="js/script.js" ></script>
 </body>
 </html>
