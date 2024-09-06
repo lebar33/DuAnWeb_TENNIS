@@ -28,6 +28,16 @@ $smg_type = getFlashData('smg_type'); // lấy kiểu thông báo của các tra
    <p>
       <a href="?module=products&action=add" class="btn btn-success btn-sm">Thêm sản phẩm <i class="fa-solid fa-plus"></i></a>
    </p>
+   <?php 
+   if(empty($listProduct)):
+   ?>
+   <div class="alert alert-danger text-center">Không có sản phẩm nào</div>
+   <?php
+   $count = 0;
+   else:
+      foreach($listProduct as $item): 
+         $count++;
+   ?>
    <table class="table table-bordered">
       <thead>
          <th>STT</th>
@@ -40,12 +50,6 @@ $smg_type = getFlashData('smg_type'); // lấy kiểu thông báo của các tra
          <th width="10%">Delete</th>
       </thead>
       <tbody>
-      <?php
-         $count = 0;
-         if(!empty($listProduct)):
-            foreach($listProduct as $item): 
-               $count++;
-      ?>
       <tr>
          <td><?php echo $count; ?></td>
          <td><?php echo $item['name'] ?></td>
@@ -57,17 +61,9 @@ $smg_type = getFlashData('smg_type'); // lấy kiểu thông báo của các tra
          <td><a href="?module=users&action=delete&id=<?php echo $item['id']; ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa')" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a></td><!--xóa-->
       </tr>
       <?php
-            endforeach;
-         else: 
+         endforeach;
+      endif;
       ?> 
-         <tr>
-            <td colspan="7">
-               <div class="alert alert-danger text-center">Không có người dùng nào</div>
-            </td>
-         </tr>
-      <?php
-         endif;
-      ?>
       </tbody>
    </table>
 </div>

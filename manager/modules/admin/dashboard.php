@@ -3,6 +3,7 @@ $title = [
     'pageTitle'=>'Trang ADMIN'
 ];
 layout('header-admin',$title);
+if(!isLogin()) redirect('?module=auth&action=login');
 ?>
 <body>
     <section class="Admin">

@@ -23,12 +23,12 @@ if(!empty($filterAll['id'])){
    }
    else{
       setFlashData('smg', 'Người dùng không tồn tại!');
-      setFlashData('smg-type', 'danger');
+      setFlashData('smg_type', 'danger');
    }
 }
 else{
    setFlashData('smg', 'Liên kết không tồn tại!');
-   setFlashData('smg-type', 'danger');
+   setFlashData('smg_type', 'danger');
 }
 
 redirect('?module=admin&action=dashboard&quanli=listUsers');

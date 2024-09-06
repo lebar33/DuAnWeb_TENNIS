@@ -1,7 +1,7 @@
 <?php
- if(!defined('_CODE')){ // Nếu hằng _CODE không tồn tại nghĩa là người dùng ko truy cập từ file index chính
-    die('Acces denied...');
- }
+if(!defined('_CODE')){ // Nếu hằng _CODE không tồn tại nghĩa là người dùng ko truy cập từ file index chính
+   die('Acces denied...');
+}
 
  function query($sql, $data=[], $check = false){  // $check : nếu check chỉ viết vào dữ liệu thì là false, còn đọc dữ liệu ra thì true
    global $conn;

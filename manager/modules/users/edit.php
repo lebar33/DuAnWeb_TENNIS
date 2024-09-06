@@ -9,10 +9,10 @@ if(!empty($filterAll['id'])){
    $userId = $filterAll['id'];
    $userDetail = oneRaw("SELECT * FROM users WHERE id = $userId");
    if(!empty($userDetail)){
-      setFlashData('user-detail', $userDetail);
+      setFlashData('user-detail', $userDetail); // Lấy lại toàn bộ thông tin người dùng đã post
    }
    else{
-      redirect('?module=users&action=list');
+      redirect('?module=admin&action=dashboard&quanli=listUsers');
    }
 }
 

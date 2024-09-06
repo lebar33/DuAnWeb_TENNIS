@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 03, 2024 at 05:55 PM
+-- Generation Time: Sep 06, 2024 at 06:16 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -29,9 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `thutu` int(11) NOT NULL
+  `name` varchar(200) NOT NULL,
+  `thutu` int(11) NOT NULL,
+  `describ` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `name`, `thutu`, `describ`) VALUES
+(1, 'Rackets', 1, 'Vợt chơi tennis'),
+(2, 'woman', 1, 'Trang phục nữ'),
+(3, 'men', 1, 'Trang phục nam'),
+(4, 'shoes', 1, 'Giày chơi tennis\r\n'),
+(5, 'sale', 1, 'Giảm giá');
 
 -- --------------------------------------------------------
 
@@ -53,7 +65,10 @@ CREATE TABLE `logintoken` (
 INSERT INTO `logintoken` (`id`, `idUser`, `token`, `createAt`) VALUES
 (103, 28, '509a7793b66fa72b9099523dd4fda517191df6d0', '2024-09-02 18:36:55'),
 (104, 28, 'ff5312009aa2f7bbfaca53c5105a8cca016ae76b', '2024-09-03 04:10:16'),
-(105, 28, 'f137962198c7395d7a6e92dba2ebde0a13690d38', '2024-09-03 17:16:24');
+(105, 28, 'f137962198c7395d7a6e92dba2ebde0a13690d38', '2024-09-03 17:16:24'),
+(107, 28, 'ca8385078ed8f106d88f824164a778aedbc95283', '2024-09-05 06:23:05'),
+(108, 28, 'b39ad143b6856daf3e47e5dd87d9dd32e6a54f9f', '2024-09-05 16:21:32'),
+(109, 28, '23ffcf5634da17ddaf9828487ef3f4bf0d39cfd7', '2024-09-06 14:55:16');
 
 -- --------------------------------------------------------
 
@@ -67,8 +82,7 @@ CREATE TABLE `products` (
   `price` decimal(10,2) NOT NULL,
   `quantity` int(11) NOT NULL,
   `image` varchar(100) NOT NULL,
-  `categoryId` int(11) NOT NULL,
-  `tomtat` text NOT NULL
+  `categoryId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -96,8 +110,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `fullName`, `email`, `phone`, `passWord`, `forgotToken`, `activeToken`, `status`, `createAt`, `updateAt`) VALUES
 (28, 'NguyenNgocTin', 'nntin@gmail.com', '0888899991', '$2y$10$BoDgo50kVwqE/ObmIQsN5uDUHitKNhLaXoXZ91jO4y0HFA9Zwgz0u', NULL, NULL, 0, '2024-09-02 18:39:46', NULL),
-(33, 'truong', 'letruong8017@gmail.com', '0865057272', '$2y$10$0Df5t.R92E91eYh7rd90eOUXcpGsGHZxix9HFm/R2rJY2NGNNMdzy', NULL, NULL, 1, '2024-09-02 18:43:03', NULL),
-(35, 'pbt1234', 'pbt1234@gmail.com', '0873123012', '$2y$10$LZRlZTv8fjPC2CqDnBrivuHASDDBvW/u3g3yHrkVzYj82UAIgqCz.', NULL, NULL, 1, '2024-09-03 04:38:08', NULL);
+(33, 'truong', 'letruong8017@gmail.com', '0865057272', '$2y$10$0Df5t.R92E91eYh7rd90eOUXcpGsGHZxix9HFm/R2rJY2NGNNMdzy', NULL, NULL, 1, '2024-09-05 06:21:19', NULL),
+(35, 'pbt1234', 'pbt1234@gmail.com', '0873123012', '$2y$10$LZRlZTv8fjPC2CqDnBrivuHASDDBvW/u3g3yHrkVzYj82UAIgqCz.', NULL, NULL, 1, '2024-09-05 04:56:20', NULL),
+(36, 'bar12312', 'bar69218@gmail.com', '0234567891', '$2y$10$Gbup1kfjHjnc2T6Owht5k.uuKZIIqMs1QFYAtoJbZSRVRPYoqQK.O', NULL, NULL, 1, '2024-09-05 17:28:01', NULL);
 
 --
 -- Indexes for dumped tables
@@ -137,13 +152,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `logintoken`
 --
 ALTER TABLE `logintoken`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -155,7 +170,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- Constraints for dumped tables

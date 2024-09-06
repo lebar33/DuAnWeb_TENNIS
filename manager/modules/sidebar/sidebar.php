@@ -16,8 +16,8 @@
             <li><a href=""><i class="ri-product-hunt-line"></i>Sản Phẩm</a>
                 <ul class="Sub-Menu">
                     <div class="Sub-Menu-Items">
-                        <li><a href="">Danh Sách</a></li>
-                        <li><a href="">Danh mục</a></li>
+                        <li><a href="?module=admin&action=dashboard&quanli=listCategory">Danh mục</a></li>
+                        <li><a href="?module=admin&action=dashboard&quanli=listProducts">Danh Sách</a></li>
                     </div>
                     
                 </ul>

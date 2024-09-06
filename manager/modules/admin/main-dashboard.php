@@ -2,15 +2,19 @@
     <div class="Admin-Content-Main-Title">
         <h1>Dashboard</h1>
 
-        <?php 
-            if(!empty($_GET['quanli'])){
-                $tam = $_GET['quanli'];
-            }
-            else{
-                $tam = '';
+        <?php
+            $tam = '';
+            if(!empty(filter()['quanli'])){
+                $tam = filter()['quanli'];
             }
             if($tam == 'listUsers'){
                 include("modules/users/list.php");
+            }
+            else if($tam == 'listProducts'){
+                include("modules/products/list.php");
+            }
+            else if($tam == 'listCategory'){
+                include("modules/category/list.php");
             }
         ?>
     </div>

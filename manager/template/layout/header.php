@@ -37,11 +37,12 @@
                 <div class="header-nav ">
                     <nav>
                         <ul>
-                            <li><a href="?module=pages&action=rackets">RACKETS</a></li>
-                            <li><a href="?module=pages&action=women">WOMEN</a></li>
-                            <li><a href="?module=pages&action=men">MEN</a></li>
-                            <li><a href="?module=pages&action=shoes">SHOES</a></li>
-                            <li><a href="?module=pages&action=sale">SALE</a></li>
+                            <li><a href="?module=pages&action=rackets">VỢT</a></li>
+                            <li><a href="?module=pages&action=women">NỮ</a></li>
+                            <li><a href="?module=pages&action=men">NAM</a></li>
+                            <li><a href="?module=pages&action=shoes">GIÀY</a></li>
+                            <li><a href="?module=pages&action=sale">GIẢM GIÁ</a></li>
+                            <li><a href="?module=pages&action=orther">KHÁC</a></li>
                         </ul>
                     </nav>
                 </div>
