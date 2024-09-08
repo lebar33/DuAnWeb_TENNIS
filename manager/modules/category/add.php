@@ -66,7 +66,7 @@ layout('header-login', $tile);
 
 <div class="container">
    <div class="row" style="margin:50px auto">
-      <h2 class="text-center text-uppercase">Thêm người dùng</h2>
+      <h2 class="text-center text-uppercase">Thêm danh mục mới</h2>
       <?php 
       if(!empty($smg)){
          getSmg($smg, $smg_type);

@@ -4,12 +4,60 @@
  }
  //FOOTER - JS
 ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="<?php echo _WEB_HOST_TEMPLATE; ?>/js\bootstrap.min.js"> </script>
-<script src="<?php echo _WEB_HOST_TEMPLATE; ?>/js\custom.js"> </script>
- 
-<footer>
+
+
+    <section class="Hot-products">
+        <div class="container">
+            <div class="row-grid">
+                <p class="heading-text" >NEW ARRIVALS</p>
+            </div>
+            <div class="row-grid row-grid-hot-products">
+                <div class="hot-product-item">
+                    <a href=""><img src="template/image/product.png" alt=""></a>
+                    <p><a href=""> Nike Air Max 720 GS ‘White Aurora’ </a></p>
+                    <span>Men's Shoes</span>
+                    <div class="hot-product-item-price">
+                        <p>$200.00 <span>$250.00</span>  </p>
+                    </div>
+                </div>
+                <div class="hot-product-item">
+                    <a href=""><img src="template/image/product1.png" alt=""></a>
+                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
+                    <span>Men's Shoes</span>
+                    <div class="hot-product-item-price">
+                        <p>$200.00 <span>$250.00</span>  </p>
+                    </div>
+                </div>
+                <div class="hot-product-item">
+                    <a href=""><img src="template/image/product2.png" alt=""></a>
+                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
+                    <span>Men's Shoes</span>
+                    <div class="hot-product-item-price">
+                        <p>$200.00 <span>$250.00</span>  </p>
+                    </div>
+                </div>
+                <div class="hot-product-item">
+                <a href=""><img src="template/image/product3.png" alt=""></a>
+                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
+                    <span>Men's Shoes</span>
+                    <div class="hot-product-item-price">
+                        <p>$200.00 <span>$250.00</span>  </p>
+                    </div>
+                </div>
+                <div class="hot-product-item">
+                    <a href=""><img src="template/image/product4.png" alt=""></a>
+                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
+                    <span>Men's Shoes</span>
+                    <div class="hot-product-item-price">
+                        <p>$200.00 <span>$250.00</span>  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
         <div class="container">
             <div class="row-grid">
                 <div class="footer-item">
@@ -36,3 +84,8 @@
             </div>
         </div>
     </footer>
+    <script src="template/js/script.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="<?php echo _WEB_HOST_TEMPLATE; ?>/js\bootstrap.min.js"> </script>
+    

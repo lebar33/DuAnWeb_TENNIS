@@ -1,9 +1,8 @@
 <div class="Admin-Content-Main">
     <div class="Admin-Content-Main-Title">
-        <h1>Dashboard</h1>
 
         <?php
-            $tam = '';
+            $tam = 'Dashboard';
             if(!empty(filter()['quanli'])){
                 $tam = filter()['quanli'];
             }

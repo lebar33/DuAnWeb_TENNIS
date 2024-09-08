@@ -8,7 +8,7 @@ if(!isLogin()) redirect('?module=auth&action=login');
 <body>
     <section class="Admin">
         <div class="row-grid">
-            <?php require_once('./modules/sidebar\sidebar.php');?>
+            <?php require_once('./modules/sidebar\sidebar-admin.php');?>
             
             
             <div class="Admin-Content">
@@ -36,6 +36,6 @@ if(!isLogin()) redirect('?module=auth&action=login');
 
     </section>
 
-    <script src="template\js\script.js" ></script>
+    <script src="template\js\script-admin.js" ></script>
 </body>
 </html>

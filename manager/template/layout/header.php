@@ -14,10 +14,7 @@
    <link rel="stylesheet" href="<?php echo _WEB_HOST_TEMPLATE; ?>/css/bootstrap.min.css">
    <link rel="stylesheet" href="<?php echo _WEB_HOST_TEMPLATE; ?>/css/style.css?ver=<?php echo rand();?>">
    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"  rel="stylesheet"/>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-   <script>
-
-   </script>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
  </head>
  <body>
     <!-- header -->
@@ -37,12 +34,12 @@
                 <div class="header-nav ">
                     <nav>
                         <ul>
-                            <li><a href="?module=pages&action=rackets">VỢT</a></li>
-                            <li><a href="?module=pages&action=women">NỮ</a></li>
-                            <li><a href="?module=pages&action=men">NAM</a></li>
-                            <li><a href="?module=pages&action=shoes">GIÀY</a></li>
-                            <li><a href="?module=pages&action=sale">GIẢM GIÁ</a></li>
-                            <li><a href="?module=pages&action=orther">KHÁC</a></li>
+                            <li><a href="?module=home&action=index&pages=rackets">VỢT</a></li>
+                            <li><a href="?module=home&action=index&pages=woman">NỮ</a></li>
+                            <li><a href="?module=home&action=index&pages=men">NAM</a></li>
+                            <li><a href="?module=home&action=index&pages=shoes">GIÀY</a></li>
+                            <li><a href="?module=home&action=index&pages=sale">GIẢM GIÁ</a></li>
+                            <li><a href="?module=home&action=index&pages=orther">KHÁC</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -51,7 +48,7 @@
                     <i class="ri-search-2-line"></i>
                 </div>
                 <div class="header-cart">
-                    <a href="?module=pages&action=gioHang"><i class="ri-shopping-cart-2-line" number="O"></i></a> 
+                    <a href="?module=home&action=index&pages=gioHang"><i class="ri-shopping-cart-2-line" number="1"></i></a> 
                 </div> 
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,5 +65,3 @@
         </div>
     </header>
 
- </body>
- </html>

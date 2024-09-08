@@ -1,51 +1,33 @@
-
-<!-- Hot product -->
-    <section class="Hot-products">
-        <div class="container">
-            <div class="row-grid">
-                <p class="heading-text" >NEW ARRIVALS</p>
-            </div>
-            <div class="row-grid row-grid-hot-products">
-                <div class="hot-product-item">
-                    <a href=""><img src="template/image/product.png" alt=""></a>
-                    <p><a href=""> Nike Air Max 720 GS ‘White Aurora’ </a></p>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
-                </div>
-                <div class="hot-product-item">
-                    <a href=""><img src="template/image/product1.png" alt=""></a>
-                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
-                </div>
-                <div class="hot-product-item">
-                    <a href=""><img src="template/image/product2.png" alt=""></a>
-                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
-                </div>
-                <div class="hot-product-item">
-                <a href=""><img src="template/image/product3.png" alt=""></a>
-                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
-                </div>
-                <div class="hot-product-item">
-                    <a href=""><img src="template/image/product4.png" alt=""></a>
-                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="main-dex">
+    <?php
+        $filterAll = filter();
+        $move = '';
+        if(!empty(filter()['pages'])){
+            $move = filter()['pages'];
+        }
+        if($move == 'rackets'){
+            include("modules/pages/rackets.php");
+        }
+        else if($move == 'woman'){
+            include("modules/pages/woman.php");
+        }
+        else if($move == 'men'){
+            include("modules/pages/men.php");
+        }
+        else if($move == 'sale'){
+            include("modules/pages/sale.php");
+        }
+        else if($move == 'shoes'){
+            include("modules\pages\shoes.php");
+        }
+        else if($move == 'orther'){
+            include("modules/pages/orther.php");
+        }
+        else if($move == 'gioHang'){
+            include("modules/pages/gioHang.php");
+        }
+        else{
+            include("./modules/sidebar/sidebar.php");
+        }
+    ?>
+</div>
