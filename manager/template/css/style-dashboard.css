@@ -1,0 +1,322 @@
+:root {
+    --main-bg-color: #414e66;
+    --sub-bg-color: #f2f7fb;
+    --top-height: 70px ; 
+    --main-border-radius: 5px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+li { 
+    list-style: none;
+}
+.row-grid {
+    display: grid;
+    justify-content: space-between;
+}
+.Flex-Box {
+    display: flex;
+   
+}
+.main-btn {
+    padding: 10px 12px;
+    background-color: rgb(243, 35, 35);
+    color: rgb(254, 251, 251);
+    border: none ;
+    cursor: pointer;
+}
+.Delete-Class, .Non-Confirm-Order {
+    padding: 3px;
+    background-color: red;
+    color: whitesmoke;
+    border-radius: var(--main-border-radius);
+}
+.Edit-Class, .Confirm-Order {
+    padding: 3px;
+    background-color: rgb(25, 21, 227);
+    color: whitesmoke;
+    border-radius: var(--main-border-radius);
+}
+    /* Main Admin */
+.Admin .row-grid {
+    grid-template-columns: 20% 80%;
+}   
+    /* Sidebar */
+    
+.Admin-Sidebar {
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    
+}
+.Admin-Sidebar-Top {
+    background-color: #ffffff;
+    text-align: center;
+    height: var(--top-height);
+    border-bottom: 1px solid gray;
+    
+}
+.Admin-Sidebar-Top img {
+    height: 69px;
+}
+.Admin-Sidebar-Content > ul > li > a {
+   width: 100%;
+   display: block;
+   display: flex;
+   justify-content: flex-start;
+}
+.Admin-Sidebar-Content ul li a i {
+    margin-right: 6px;
+}
+.Admin-Sidebar-Content {
+    padding: 30px 0 0 30px;
+    color: rgb(241, 241, 241);
+}
+.Admin-Sidebar-Content ul li {
+    padding: 6px ;
+    padding-left: 19px;
+}
+.Admin-Sidebar-Content ul li:hover {
+    background-color: rgb(168, 154, 154);
+    transition: all 1s ease;
+}
+.Sub-Menu {
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+/*.Sub-Menu.active { 
+    height: 60px; 
+}*/
+.Sub-Menu li:hover a {
+    color: black;
+}
+    /* Content*/
+.Admin-Content {
+    background-color: white;
+}
+.Admin-Content-Top {
+    display: flex;
+
+    justify-content: space-between;
+    height: var(--top-height);
+    border-bottom: 1px solid rgb(78, 74, 74) ;
+    padding: 0 30px;
+} 
+.Admin-Content-Top .Flex-Box {
+    height: 70px;
+    align-items: center;
+}
+.Admin-Content-Top i {
+    cursor: pointer;
+    margin-right: 15px;
+}
+.Admin-Content-Top-Right ul li:last-child p {
+    cursor: pointer;
+
+}
+.Admin-Content-Top-Right ul li:first-child i {
+    position: relative;
+}
+.Admin-Content-Top-Right ul li:first-child i::after {
+    position: absolute;
+    content: attr(number);
+    height: 20px;
+    width: 20px;
+    display: flex;
+    background-color: rgb(235, 93, 93);
+    border-radius: 50%;
+    top: -12px;
+    right: -12px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    animation: notification;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+.Admin-Content-Top-Right ul li:nth-child(2) i {
+    position: relative;
+}
+.Admin-Content-Top-Right ul li:nth-child(2)  i:after {
+    position: absolute;
+    content: attr(number);
+    height: 20px;
+    width: 20px;
+    display: flex;
+    background-color: rgb(235, 93, 93);
+    border-radius: 50%;
+    top: -12px;
+    right: -12px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    animation: notification;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+.Admin-Content-Main-Title h1 {
+    padding: 12px;
+    font-weight: 500;
+    position: relative;
+}
+.Admin-Content-Main-Title h1::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 80px;
+    background-color: var(--main-bg-color);
+    bottom: 7px;
+    left: 12px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+@keyframes notification {
+    0% {
+       opacity: 0;
+   }
+   100%{
+       opacity: 1;
+   }
+}
+    /* Nội Dung Admin*/
+.Admin-Content-Main-Content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 12px;
+    column-gap: 20px;
+}
+
+.Admin-Content-Main-Content-Left input {
+    height: 40px;
+    border: none;
+    background-color: rgb(245, 241, 236);
+    margin-bottom: 15px;
+    outline: none;
+    border-radius: var(--main-border-radius);
+    padding-left: 6px;
+}
+.Admin-Content-Main-Content-Two-Input {
+    display: flex;
+    justify-content: space-between;
+}
+.Admin-Content-Main-Content-Two-Input input {
+    width: 42%;
+}
+.Admin-Content-Main-Content-Left textarea {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 6px;
+    border: none;
+}
+
+.Admin-Content-Main-Content-Right-Image input {
+    display: none;
+}
+.Admin-Content-Main-Content-Right-ImageSS input {
+    display: none;
+}
+.Admin-Content-Main-Content-Right label {
+    
+    padding: 10px 12px;
+    background-color: rgb(243, 35, 35);
+    color: rgb(254, 251, 251);
+    border: none ;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.Image-Show, .ImageS-Show {
+    min-height: 150px;
+}
+
+    /*Product List*/
+.Admin-Content-Main-Content-List {
+    display: grid;   
+    padding: 0;
+    column-gap: 20px;
+    background-color: white;
+}
+.Admin-Content-Main-Content-List table {
+    width: 100%;
+    padding: 10px 0;
+    border-collapse: collapse;
+}
+.Admin-Content-Main-Content-List table,th,td {
+    text-align: center;
+    
+}
+.Admin-Content-Main-Content-List table th {
+    background-color: black;
+    color: white;
+    padding: 8px 10px;
+
+}
+
+    /*Order List*/
+.Admin-Content-Main-Content-Order-List table, tbody , th , td {
+    text-align: center;
+    padding: 3px 3px;
+    border: 1px solid black;
+        
+}
+.Admin-Content-Main-Content-Order-List {
+    display: grid;   
+    padding: 0;
+    column-gap: 20px;
+    background-color: white;
+}
+.Admin-Content-Main-Content-Order-List table {
+    width: 100%;
+    padding: 10px 0;
+    border-collapse: collapse;
+}
+.Admin-Content-Main-Content-Order-List table th td {
+    text-align: center;
+    
+}
+.Admin-Content-Main-Content-Order-List table th {
+    background-color: black;
+    color: white;
+    padding: 8px 10px;
+}
+    /* Order Detail */
+.Admin-Content-Main-Content-Order-Detail-List table, tbody, th, td {
+    text-align: center;
+    padding: 3px 3px;           
+}
+.Admin-Content-Main-Content-Order-Detail-List {
+    display: grid;   
+    padding: 0;
+    column-gap: 20px;
+    background-color: white;
+}
+.Admin-Content-Main-Content-Order-Detail-List table {
+    width: 100%;
+    padding: 10px 0;
+    border-collapse: collapse;
+}
+.Admin-Content-Main-Content-Order-Detail-List table,th,td {
+    text-align: center;
+        
+}
+.Admin-Content-Main-Content-Order-Detail-List table th {
+    background-color: black;
+    color: white;
+    padding: 8px 10px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"  rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>3H-Admin</title>
+</head>
+<body>
+    <section class="Admin">
+        <div class="row-grid">
+            <div class="Admin-Sidebar">
+                <div class="Admin-Sidebar-Top">
+                    <img src="/admin/asset/image/logo.png" alt="">
+                </div>
+                <div class="Admin-Sidebar-Content">
+                    <ul>
+                        <li><a href=""><i class="ri-dashboard-line"></i>Dashboard</a>
+                            
+                        </li>
+                        <li><a href=""><i class="ri-file-list-line"></i>Đơn Hàng</a>
+                            <ul class="Sub-Menu">
+                                <div class="Sub-Menu-Items">
+                                    <li><a href="">Danh Sách</a></li>
+                                </div>
+                                
+                            </ul>
+                        </li>
+                        <li><a href=""><i class="ri-product-hunt-line"></i>Sản Phẩm</a>
+                            <ul class="Sub-Menu">
+                                <div class="Sub-Menu-Items">
+                                    <li><a href="">Danh Sách</a></li>
+                                <li><a href="">Thêm</a></li>
+                                </div>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Admin-Content">
+                <div class="Admin-Content-Top">
+                    <div class="Admin-Content-Top-Left">
+                        <ul class="Flex-Box">
+                            <li><i class="ri-search-2-line"></i></li>
+                            <li><i class="ri-drag-move-line"></i></li>
+                        </ul>
+                    </div>
+                    <div class="Admin-Content-Top-Right">
+                        <ul class="Flex-Box">
+                            <li><i class="ri-notification-4-line" number="3"></i></li>
+                            <li><i class="ri-message-2-line" number="5"></i></li>
+                            <li class="Flex-Box">
+                                <img style="width: 50px;" src="image/logo.png" alt="">
+                                <p>3H-Admin<i class="ri-arrow-down-s-fill"></i> </p>
+                            </li>
+                        </ul>  
+                    </div>
+                </div>
+                <div class="Admin-Content-Main">
+                    <div class="Admin-Content-Main-Title">
+                        <h1>Chi Tiết Đơn Hàng</h1>
+                    </div>
+                    <!--Nội dung-->
+                    <div class="Admin-Content-Main-Content-Order-Detail-List" >
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Ảnh</th>
+                                    <th>Tên</th>
+                                    <th>Giá</th>
+                                    <th>Số Lượng</th>
+                                    <th>Thành Tiền</th>
+                                    <th>Tùy Biến</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><img style="width: 70px;" src="/admin/asset/image/logo.png" alt=""></td>
+                                    <td>Babolat Pure Aero</td>
+                                    <td>$250.00</td>
+                                    <td>1</td>
+                                    <td>$250.00</td>
+                                    <td>
+                                        <a class="Delete-Class" href="">Xóa</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><img style="width: 70px;" src="/admin/asset/image/logo.png" alt=""></td>
+                                    <td>Babolat Pure Aero</td>
+                                    <td>$250.00</td>
+                                    <td>1</td>
+                                    <td>$250.00</td>
+                                    <td>
+                                        <a class="Delete-Class" href="">Xóa</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 700;" colspan="5">Tổng Cộng</td>
+                                    <td style="font-weight: 700;">$500.00</td>
+                                    <td style="border: 1px solid white;" ></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>            
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/admin/asset/js/script.js" ></script>
+</body>
+</html>
