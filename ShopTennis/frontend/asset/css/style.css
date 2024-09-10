@@ -470,7 +470,7 @@ footer .row-grid {
     position: relative;
     margin: 5px 0;
 }
-.Hot-product-list span:nth-child(3) {
+.Hot-product-list  span:nth-child(3) {
     font-family: 'Courier New', Courier, monospace;
 }
 
