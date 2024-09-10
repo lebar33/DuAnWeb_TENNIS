@@ -6,55 +6,55 @@
 ?>
 
 
-    <section class="Hot-products">
-        <div class="container">
-            <div class="row-grid">
-                <p class="heading-text" >NEW ARRIVALS</p>
+<section class="Hot-products">
+    <div class="container">
+        <div class="row-grid">
+            <p class="heading-text" >NEW ARRIVALS</p>
+        </div>
+        <div class="row-grid row-grid-products">
+            <div class="hot-product-item">
+                <a href=""><img src="template/image/Shoes/Barricade_13_Tennis_Shoes_Red_IF9131_HM1.avif" alt=""></a>
+                <p><a href=""> Adidas Barricade 13 </a></p>
+                <span>Men's Tennis Shoes</span>
+                <div class="hot-product-item-price">
+                    <p>$160<span></span>  </p>
+                </div>
             </div>
-            <div class="row-grid row-grid-hot-products">
-                <div class="hot-product-item">
-                    <a href=""><img src="template/image/product.png" alt=""></a>
-                    <p><a href=""> Nike Air Max 720 GS ‘White Aurora’ </a></p>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
+            <div class="hot-product-item">
+                <a href=""><img src="template/image/Men/M+NKCT+DF+SLAM+TOP+LN.png" alt=""></a>
+                <p><a href=""> NikeCourt Slam </a></p>
+                <span>Men's Dri-FIT Tennis Top</span>
+                <div class="hot-product-item-price">
+                    <p>$90<span></span>  </p>
                 </div>
-                <div class="hot-product-item">
-                    <a href=""><img src="template/image/product1.png" alt=""></a>
-                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
+            </div>
+            <div class="hot-product-item">
+                <a href=""><img src="template/image/Woman/W+NKCT+HRTGE+FLC+OOS+GFX+CREW.png" alt=""></a>
+                <p><a href=""> NikeCourt Heritage</a></p>
+                <span>Woman's Oversized Tennis Sweatshirt</span>
+                <div class="hot-product-item-price">
+                    <p>$90 <span></span>  </p>
                 </div>
-                <div class="hot-product-item">
-                    <a href=""><img src="template/image/product2.png" alt=""></a>
-                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
+            </div>
+            <div class="hot-product-item">
+                <a href=""><img src="template/image/Racket/Pure-Aero-Unstrung-1.png" alt=""></a>
+                <p><a href="">BABOLAT Pure Aero</a></p>
+                <span></span>
+                <div class="hot-product-item-price">
+                    <p>$270<span></span>  </p>
                 </div>
-                <div class="hot-product-item">
-                <a href=""><img src="template/image/product3.png" alt=""></a>
-                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
-                </div>
-                <div class="hot-product-item">
-                    <a href=""><img src="template/image/product4.png" alt=""></a>
-                    <p><a href="">Nike Air Max 720 GS ‘White Aurora’ </p></a>
-                    <span>Men's Shoes</span>
-                    <div class="hot-product-item-price">
-                        <p>$200.00 <span>$250.00</span>  </p>
-                    </div>
+            </div>
+            <div class="hot-product-item">
+                <a href=""><img src="template/image/Shoes/nike-air-zoom-vapor-pro-hc-shoes.webp" alt=""></a>
+                <p><a href=""> NikeCourt Air Zoom Vapor Pro HC </a></p>
+                <span>Men's Tennis Shoes</span>
+                <div class="hot-product-item-price">
+                    <p>$250.00 <span></span>  </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
     <footer>
