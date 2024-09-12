@@ -45,15 +45,14 @@ if(isPost()){
     }
     if(empty($error)){
         // di chuyển hình qua file template
-        $r = move_uploaded_file($_FILES['imageProducts']['tmp_name'], 'E:\XAMPP\htdocs\DuAnWeb_TENNIS\manager\template\image\\'.$_FILES['imageProducts']['name']);
-        
+        $r = move_uploaded_file($_FILES['imageProducts']['tmp_name'], 'E:/XAMPP/htdocs/DuAnWeb_TENNIS/manager/template/image/'.$_FILES['imageProducts']['name']);
         // Xử lý insert
         $dataInsert = [
             'name' => $filterAll['name'],
             'price' => $filterAll['price'],
             'quantity' => $filterAll['quantity'],
             'categoryId' => $filterAll['categoryId'],
-            'image' => "template\image\ ".$_FILES['imageProducts']['name']
+            'image' => "template/image/".$_FILES['imageProducts']['name']
         ];
         $insertStatus = insert('products', $dataInsert);
         if($insertStatus){

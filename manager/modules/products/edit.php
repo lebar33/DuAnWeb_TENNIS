@@ -60,7 +60,7 @@ if(isPost()){
         // di chuyển hình qua file template
         if(!empty($_FILES['imageProducts']['name'])){
             $r = move_uploaded_file($_FILES['imageProducts']['tmp_name'], 'E:\XAMPP\htdocs\DuAnWeb_TENNIS\manager\template\image\ '.$_FILES['imageProducts']['name']);
-            $image = "template\image\ ".$_FILES['imageProducts']['name'];
+            $image = "template/image/".$_FILES['imageProducts']['name'];
         }
         else{
             $image = $productDetail['image'];
