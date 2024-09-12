@@ -168,9 +168,27 @@ function isLogin(){
    if(getSession('loginToken')){
       $tokenLogin = getSession('loginToken');
 
-      // Kiểm tra xem token đó đã tồn tại trong bảng loginToken hay chưa
+      // Kiểm tra xem token đó đã tồn tại trong bảng loginToken hay chưa hoặc id trùng với admin
       $query = oneRaw("SELECT idUser FROM logintoken WHERE token = '$tokenLogin'");
-      if(!empty($query)){
+      if(!empty($query) || $query['idUser'] != 37){
+         $check = true;
+      }
+      else{
+         removeSession('loginToken');
+      }
+   }
+   return $check;
+}
+
+function isLoginAdmin(){
+   //Kiểm tra trạng thái đăng nhập => nếu đăng nhập không hợp lệ sẽ ko có session có nghĩa ko qua bước đăng nhập nên điều hướng về trang login 
+   $check = false;
+   if(getSession('loginTokenAdmin')){
+      $tokenLogin = getSession('loginTokenAdmin');
+
+      // Kiểm tra xem token đó đã tồn tại trong bảng loginToken hay chưa hoặc id trùng với admin
+      $query = oneRaw("SELECT idUser FROM logintoken WHERE tokenAdmin = '$tokenLogin'");
+      if(!empty($query) && $query['idUser'] == 37){
          $check = true;
       }
       else{

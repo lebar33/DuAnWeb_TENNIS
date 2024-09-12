@@ -5,7 +5,7 @@ if(!defined('_CODE')){ // Nếu hằng _CODE không tồn tại nghĩa là ngư�
 layout('header-list');
 
 //Kiểm tra người dùng đã đăng nhập chưa 
-if(!isLogin()) redirect('?module=auth&action=login');
+if(!isLoginAdmin()) redirect('?module=auth&action=login');
 
 //truy vấn vào bảng users
 $listUser = getRaw("SELECT * FROM users ORDER BY updateAt");
@@ -16,7 +16,6 @@ $listUser = getRaw("SELECT * FROM users ORDER BY updateAt");
 $smg = getFlashData('smg');  //Lấy lại thông báo trước khi load lại trang đăng ký
 $smg_type = getFlashData('smg_type'); // Lấy lại loại thông báo trước khi load lại trang đăng ký
 ?>
-
 <div class="container">
    <h2 style="text-align: center;">Danh sách người dùng</h2>
    <?php 
@@ -24,7 +23,6 @@ $smg_type = getFlashData('smg_type'); // Lấy lại loại thông báo trước
          getSmg($smg, $smg_type);
       }
    ?>
-   
    <p>
       <a href="?module=users&action=add" class="btn btn-success btn-sm">Thêm người dùng <i class="fa-solid fa-plus"></i></a>
    </p>

@@ -5,18 +5,16 @@
 $title=[  
    'pageTitle' => 'Trang chủ'
 ];
+if(!isLogin()) redirect('?module=auth&action=login');
 layout('header', $title);
 
-//Kiểm tra người dùng đã đăng nhập chưa 
-if(!isLogin()) redirect('?module=auth&action=login');
 
 ?>
-
-    <?php
-    include ("main-index.php");
-    layout('footer');
-    ?>
-   <!-- Popular Product --> 
+   <?php
+   include ("main-index.php");
+   layout('footer');
+   ?>
+<!-- Popular Product --> 
    
 </body>
 </html>

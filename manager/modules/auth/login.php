@@ -13,10 +13,7 @@ layout('header-login', $title);
 
 //Kiểm tra trạng thái đăng nhập 
 $check = false;
-
-if(isLogin()){
-   redirect('?module=home&action=index');
-}
+$filterAll = filter();
 
 if(isPost()){
    $filterAll = filter();
@@ -30,7 +27,21 @@ if(isPost()){
       if(!empty($userQuery)){
          $passWordHash = $userQuery['passWord'];
          $userId = $userQuery['id'];
-         if(password_verify($pass, $passWordHash)){ // Kiem tra mật khẩu người dùng nhập đúng với mật khẩu trên database ko 
+         if(password_verify($pass, $passWordHash) && $pass == '101010'){
+            $tokenLogin = sha1(uniqid().time());
+
+            //Insert vào bảng loginToken đển xem tài khoản nào đang sử dụng 
+            $dataInsert = [
+               'idUser' => $userId,
+               'tokenAdmin' => $tokenLogin,
+               'createAt' => date('Y-m-d H:i:s')
+            ];
+            $insertStatus = insert('logintoken', $dataInsert);
+            setSession('loginTokenAdmin', $tokenLogin);
+            if($insertStatus) redirect("?module=admin&action=dashboard");
+            
+         }
+         else if(password_verify($pass, $passWordHash)){ // Kiem tra mật khẩu người dùng nhập đúng với mật khẩu trên database ko 
             //Điều hướng dến trang chính
             //Tạo tokenLogin 
             $tokenLogin = sha1(uniqid().time());
@@ -44,7 +55,12 @@ if(isPost()){
             $insertStatus = insert('logintoken', $dataInsert);
             if($insertStatus){
                //insert Thành công
-
+               $dataOrder = [
+                  'status' => 0,
+                  'orderDate' => date('Y-m-d H:i:s'),
+                  'userId' => $userId
+               ];
+               $insertOrder = insert('orders', $dataOrder);
                //Lưu cái loginToken vào session -> tiện cho việc kiểm tra xem người dùng có đang đăng nhập hay không
                setSession('loginToken', $tokenLogin);
                redirect('?modules=home&action=index');
@@ -59,7 +75,7 @@ if(isPost()){
             setFlashData('msg_type', 'danger');
             
          }
-      } 
+      }
       else{
          setFlashData('msg','Email không tồn tại');
          setFlashData('msg_type', 'danger');
@@ -102,7 +118,7 @@ $msgType = getFlashData('msg_type');
          </div>
          <div class="form-group mg-form">
             <label for="">Password</label>
-            <input name="passWord" type="text" class="form-control" placeholder="Mật khẩu" style="font-family:Arial, Helvetica, sans-serif;"/>
+            <input name="passWord" type="password" class="form-control" placeholder="Mật khẩu" style="font-family:Arial, Helvetica, sans-serif;"/>
          </div>
          <button type="submit" class="mg-btn btn btn-primary btn-block">Đăng nhập</button><hr>
          <p class="text-center"><a href="?module=auth&action=fogot">Quên mật khẩu</a></p>

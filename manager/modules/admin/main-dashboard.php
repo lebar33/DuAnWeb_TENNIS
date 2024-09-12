@@ -15,6 +15,9 @@
             else if($tam == 'listCategory'){
                 include("modules/category/list.php");
             }
+            else if($tam == 'listOrder'){
+                include("modules/order/listOrder.php");
+            }
         ?>
     </div>
 </div>          

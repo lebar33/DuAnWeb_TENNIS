@@ -8,7 +8,7 @@
             <li><a href=""><i class="ri-file-list-line"></i>Đơn Hàng</a>
                 <ul class="Sub-Menu">
                     <div class="Sub-Menu-Items">
-                        <li><a href="">Danh Sách</a></li>
+                        <li><a href="?module=admin&action=dashboard&quanli=listOrder">Danh Sách</a></li>
                     </div>
                     
                 </ul>

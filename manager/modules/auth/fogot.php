@@ -30,7 +30,6 @@ if(isPost()){
          if($updateStatus){
             // tạo link khôi phục mật khẩu 
             $linkReset = _WEB_HOST.'?module=auth&action=reset&token='.$forgotToken;
-            
             //Gửi mail cho người dùng 
             $subject = 'Yêu cầu khôi phục mật khẩu.';
             $content = 'Chào bạn. <br>';

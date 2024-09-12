@@ -137,7 +137,6 @@ header .row-flex {
 }
  .header-cart i::after {
     position: absolute;
-    content: "O";
     display: flex;
     width: 15px;
     height: 15px;

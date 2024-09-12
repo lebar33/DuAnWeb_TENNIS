@@ -3,8 +3,12 @@
     die('Acces denied...');
  }
  //FOOTER - JS
+$product1 = oneRaw("SELECT * FROM products WHERE id = 1");
+$product2 = oneRaw("SELECT * FROM products WHERE id = 6");
+$product3 = oneRaw("SELECT * FROM products WHERE id = 11");
+$product4 = oneRaw("SELECT * FROM products WHERE id = 12");
+$product5 = oneRaw("SELECT * FROM products WHERE id = 17");
 ?>
-
 
 <section class="Hot-products">
     <div class="container">
@@ -13,43 +17,38 @@
         </div>
         <div class="row-grid row-grid-products">
             <div class="hot-product-item">
-                <a href=""><img src="template/image/Shoes/Barricade_13_Tennis_Shoes_Red_IF9131_HM1.avif" alt=""></a>
-                <p><a href=""> Adidas Barricade 13 </a></p>
-                <span>Men's Tennis Shoes</span>
+                <a href="?module=pages&action=product&id=<?php echo $product1['id'];?>"><img src="<?php echo $product1['image']; ?>" alt=""></a>
+                <p><a href=""> <?php echo $product1['name']; ?> </a></p>
                 <div class="hot-product-item-price">
-                    <p>$160<span></span>  </p>
+                    <p><?php echo number_format($product1['price'], 0, ',', '.') . ' VND'; ?><span></span></p>
                 </div>
             </div>
             <div class="hot-product-item">
-                <a href=""><img src="template/image/Men/M+NKCT+DF+SLAM+TOP+LN.png" alt=""></a>
-                <p><a href=""> NikeCourt Slam </a></p>
-                <span>Men's Dri-FIT Tennis Top</span>
+                <a href="?module=pages&action=product&id=<?php echo $product2['id'];?>"><img src="<?php echo $product2['image']; ?>" alt=""></a>
+                <p><a href=""> <?php echo $product2['name']; ?> </a></p>
                 <div class="hot-product-item-price">
-                    <p>$90<span></span>  </p>
+                    <p><?php echo number_format($product2['price'], 0, ',', '.') . ' VND'; ?><span></span></p>
                 </div>
             </div>
             <div class="hot-product-item">
-                <a href=""><img src="template/image/Woman/W+NKCT+HRTGE+FLC+OOS+GFX+CREW.png" alt=""></a>
-                <p><a href=""> NikeCourt Heritage</a></p>
-                <span>Woman's Oversized Tennis Sweatshirt</span>
+                <a href="?module=pages&action=product&id=<?php echo $product3['id'];?>"><img src="<?php echo $product3['image']; ?>" alt=""></a>
+                <p><a href=""> <?php echo $product3['name']; ?> </a></p>
                 <div class="hot-product-item-price">
-                    <p>$90 <span></span>  </p>
+                    <p><?php echo number_format($product3['price'], 0, ',', '.') . ' VND'; ?><span></span></p>
                 </div>
             </div>
             <div class="hot-product-item">
-                <a href=""><img src="template/image/Racket/Pure-Aero-Unstrung-1.png" alt=""></a>
-                <p><a href="">BABOLAT Pure Aero</a></p>
-                <span></span>
+                <a href="?module=pages&action=product&id=<?php echo $product4['id'];?>"><img src="<?php echo $product4['image']; ?>" alt=""></a>
+                <p><a href=""> <?php echo $product4['name']; ?> </a></p>
                 <div class="hot-product-item-price">
-                    <p>$270<span></span>  </p>
+                    <p><?php echo number_format($product4['price'], 0, ',', '.') . ' VND'; ?><span></span></p>
                 </div>
             </div>
             <div class="hot-product-item">
-                <a href=""><img src="template/image/Shoes/nike-air-zoom-vapor-pro-hc-shoes.webp" alt=""></a>
-                <p><a href=""> NikeCourt Air Zoom Vapor Pro HC </a></p>
-                <span>Men's Tennis Shoes</span>
+                <a href="?module=pages&action=product&id=<?php echo $product5['id'];?>"><img src="<?php echo $product5['image']; ?>" alt=""></a>
+                <p><a href=""> <?php echo $product5['name']; ?> </a></p>
                 <div class="hot-product-item-price">
-                    <p>$250.00 <span></span>  </p>
+                    <p><?php echo number_format($product5['price'], 0, ',', '.') . ' VND'; ?><span></span></p>
                 </div>
             </div>
         </div>

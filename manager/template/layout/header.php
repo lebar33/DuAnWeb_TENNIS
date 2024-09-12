@@ -48,8 +48,8 @@
                     <i class="ri-search-2-line"></i>
                 </div>
                 <div class="header-cart">
-                    <a href="?module=home&action=index&pages=gioHang"><i class="ri-shopping-cart-2-line" number="1"></i></a> 
-                </div> 
+                    <a href="?module=home&action=index&pages=gioHang"><i class="ri-shopping-cart-2-line"></i></a> 
+                </div>
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="template\image\iconUsers.png" alt="mdo" width="32" height="32" class="rounded-circle">

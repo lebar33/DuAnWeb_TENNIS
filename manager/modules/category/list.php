@@ -5,7 +5,7 @@ if(!defined('_CODE')){ // Nếu hằng _CODE không tồn tại nghĩa là ngư�
 layout('header-list');
 
 //Kiểm tra người dùng đã đăng nhập chưa 
-if(!isLogin()) redirect('?module=auth&action=login');
+if(!isLoginAdmin()) redirect('?module=auth&action=login');
 
 //truy vấn vào bảng users
 $listCategory = getRaw("SELECT * FROM category");

@@ -2,11 +2,16 @@
 if(!defined('_CODE')){ // Nếu hằng _CODE không tồn tại nghĩa là người dùng ko truy cập từ file index chính
    die('Acces denied...');
 }
+$defaultAdmin = 37;
 $filterAll = filter();
 if(!empty($filterAll['id'])){
    $userId = $filterAll['id'];
    $userDetail = getRows("SELECT * FROM users WHERE id = $userId");
-   if($userDetail>0){
+   if($userId == $defaultAdmin){
+      setFlashData('smg', 'Tài khoản này là mặc định và không thể xóa');
+      setFlashData('smg_type', 'danger');
+   }
+   else if($userDetail>0){
       //xoa
       $deletToken = delete('loginToken', "idUser = $userId");
       if($deletToken){

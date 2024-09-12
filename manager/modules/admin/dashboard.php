@@ -3,7 +3,7 @@ $title = [
     'pageTitle'=>'Trang ADMIN'
 ];
 layout('header-admin',$title);
-if(!isLogin()) redirect('?module=auth&action=login');
+if(!isLoginAdmin()) redirect('?module=auth&action=login');
 ?>
 <body>
     <section class="Admin">
@@ -24,7 +24,7 @@ if(!isLogin()) redirect('?module=auth&action=login');
                             <li><i class="ri-notification-4-line" number="3"></i></li>
                             <li><i class="ri-message-2-line" number="5"></i></li>
                             <li class="Flex-Box">
-                                <a href="?module=home"><img style="width: 50px;" src="./template/image/logo.png" alt=""></a>
+                                <a href="?module=auth&action=logout-admin"><img style="width: 50px;" src="./template/image/logo.png" alt=""></a>
                                 <p>3H-Admin<i class="ri-arrow-down-s-fill"></i> </p>
                             </li>
                         </ul>  
